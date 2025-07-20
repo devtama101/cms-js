@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Artisan</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      href='data:image/svg+xml;utf8,
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" fill="black"/>
+  <text x="50%" y="70%" font-size="70" fill="white" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold">W</text>
+</svg>'
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <h1 class="logo">Web Artisan</h1>
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <h2>Digital Solution for Your Business</h2>
+        <p>
+          We help your business growth with the right techs and better
+          solutions.
+        </p>
+        <a href="#contact" class="btn">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Web Development</h3>
+            <p>Build your website fast, responsive, and secure</p>
+          </div>
+          <div class="card">
+            <h3>UI/UX Design</h3>
+            <p>Modern user-friendly design with smooth user experience</p>
+          </div>
+          <div class="card">
+            <h3>Digital Marketing</h3>
+            <p>
+              Online marketing strategy to expand your reach and potential
+              clients/customer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section bg-light">
+      <div class="container">
+        <h2>Our clients</h2>
+        <div class="grid-2">
+          <blockquote>
+            “Layanannya sangat profesional dan hasilnya luar biasa.”
+            <footer>- Rina, UMKM Owner</footer>
+          </blockquote>
+          <blockquote>
+            “Website bisnis saya jadi naik level banget.”
+            <footer>- Andi, Freelancer</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact Us</h2>
+
+        <form id="form-wa" class="contact-form">
+          <input type="text" id="name" placeholder="Name" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <textarea id="message" rows="5" required></textarea>
+          <button type="submit" class="btn">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 WebArtisan. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("form-wa")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("message").value;
+
+          const phone = "6281392454258"; // Ganti ke nomor lu
+          const text = `Halo! Saya ${name} (${email})\n\n${message}`;
+          const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
+          window.open(url, "_blank");
+        });
+    </script>
+  </body>
+</html>
